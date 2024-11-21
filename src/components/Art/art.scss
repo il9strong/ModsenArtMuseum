@@ -1,0 +1,116 @@
+.artDetail {
+	display: flex;
+	flex-direction: row;
+	margin-top: 120px;
+	width: 100%;
+
+	.artImage {
+		width: 497px;
+		height: 570px;
+
+		object-fit: cover;
+	}
+
+	.artInfo {
+		margin-left: 80px;
+		font-family: 'Lexend Deca';
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.title {
+			display: inline-block;
+			margin: 0;
+			height: fit-content;
+			margin-bottom: 32px;
+
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+
+			text-align: left;
+			font-weight: 400;
+			font-size: 32px;
+			line-height: 40px;
+
+			color: #393939;
+		}
+
+		.author {
+			margin-bottom: 16px;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 30px;
+
+			color: #E0A449;
+		}
+
+		.date {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+
+			color: #393939;
+		}
+
+		.overview {
+			h2 {
+				font-weight: 400;
+				font-size: 32px;
+				margin-bottom: 32px;
+			}
+
+			p {
+				font-size: 16px;
+				font-weight: 400;
+			}
+
+			span {
+				color: #E0A449;
+			}
+
+			.info {
+				display: flex;
+				flex-direction: column;
+				row-gap: 16px;
+			}
+		}
+	}
+
+	.artImageBlock {
+		position: relative;
+	}
+}
+
+@media (width < 960px) {
+	.artDetail {
+		row-gap: 40px;
+
+		.artInfo {
+			margin: 0 auto;
+		}
+	}
+	
+	.artImageBlock {
+		display: flex;
+		justify-content: center;
+		width: fit-content;
+		margin: 0 auto;
+		.artImage {
+			width: 397px;
+			height: 470px;
+		}
+	}
+	.artDetail {
+		flex-direction: column;
+	}
+}
+
+@media (width < 720px) {
+	.artImageBlock {
+		.artImage {
+			width: 297px;
+			height: 370px;
+		}
+	}
+}
+
