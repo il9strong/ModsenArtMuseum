@@ -5,6 +5,7 @@
 	"repository": "https://github.com/il9strong/ModsenArtMuseum.git",
 	"author": "il9strong <shitikow2016@yandex.ru>",
 	"license": "MIT",
+	"homepage": "/",
 	"dependencies": {
 		"@hookform/resolvers": "^3.9.1",
 		"axios": "^1.7.7",
