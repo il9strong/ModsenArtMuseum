@@ -86,12 +86,12 @@ function HomePage() {
 			const rawData = response.data.data;
 
 			const filteredData: ArtResult[] = rawData
-				.map((item: ArtResult) => ({
+				.map((item: any) => ({
 					id: item.id,
 					title: item.title,
-					artistTitle: item.artistTitle,
-					imageId: item.imageId,
-					isPublicDomain: !!item.isPublicDomain,
+					artistTitle: item.artist_title,
+					imageId: item.image_id,
+					isPublicDomain: !!item.is_public_domain,
 				}))
 				.filter(
 					(item: ArtResult) =>
@@ -125,12 +125,12 @@ function HomePage() {
 
 			const rawData = response.data.data;
 
-			const artworks: ArtResult[] = rawData.map((item: ArtResult) => ({
+			const artworks: ArtResult[] = rawData.map((item: any) => ({
 				id: item.id,
 				title: item.title,
-				artistTitle: item.artistTitle,
-				imageId: item.imageId,
-				isPublicDomain: !!item.isPublicDomain,
+				artistTitle: item.artist_title,
+				imageId: item.image_id,
+				isPublicDomain: !!item.is_public_domain,
 			}));
 
 			setOtherArtworks(artworks);
@@ -156,12 +156,12 @@ function HomePage() {
 
 			const rawData = response.data.data;
 
-			const artworks: ArtResult[] = rawData.map((item: ArtResult) => ({
+			const artworks: ArtResult[] = rawData.map((item: any) => ({
 				id: item.id,
 				title: item.title,
-				artistTitle: item.artistTitle,
-				imageId: item.imageId,
-				isPublicDomain: !!item.isPublicDomain,
+				artistTitle: item.artist_title,
+				imageId: item.image_id,
+				isPublicDomain: !!item.is_public_domain,
 			}));
 
 			setTopicsArtworks(artworks);
