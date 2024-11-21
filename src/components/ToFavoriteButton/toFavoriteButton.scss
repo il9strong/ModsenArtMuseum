@@ -1,0 +1,90 @@
+.toFavorite {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 59px;
+	height: 59px;
+	border-radius: 59px;
+	background-color: #F9F9F9;
+	border: none;
+	transition: 0.1s ease all;
+
+	cursor: pointer;
+
+	&.active {
+		background: #FBD7B24D;
+	}
+
+	&:hover {
+		background: #FBD7B24D;
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
+
+	img {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.toFavoriteOnDetailPage {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 16px 16px 0 0;
+	background: #fff;
+
+	&.active {
+		background: #fdf3e8;
+	}
+
+	&:hover {
+		background: #fdf3e8;
+	}
+}
+
+@media (width <=1320px) {
+	
+	.toFavorite {
+		width: 39px;
+		height: 39px;
+
+		img {
+			width: 19px;
+			height: 19px;
+		}
+	}
+	.favoriteItem {
+		.toFavorite {
+			width: 49px;
+			height: 49px;
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+}
+
+// @media (width < 960px) {
+// 	.to-favorite-on-detail-page {
+// 		top: 0;
+// 		right: 18%;
+// 		margin: 16px 16px 0 0;
+// 	}
+// }
+
+@media (width <= 440px) {
+	.favoriteItem {
+		.toFavorite {
+			width: 39px;
+			height: 39px;
+			img {
+				width: 19px;
+				height: 19px;
+			}
+		}
+	}
+}
