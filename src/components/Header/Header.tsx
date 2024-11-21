@@ -6,13 +6,15 @@ import menuIcon from '@/assets/images/menu.svg';
 import closeIcon from '@/assets/images/cross.svg';
 import { Link, useLocation } from 'react-router-dom';
 import home from '@/assets/images/home.svg';
+import { useLockScroll } from '@/hooks/useScrollLock';
 
 function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
 
-	const toggleMenu = () => setMenuOpen(!menuOpen);
+	const toggleMenu = () => {setMenuOpen(!menuOpen)};
+	useLockScroll(menuOpen);
 
 	return (
 		<>
