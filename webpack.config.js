@@ -6,7 +6,7 @@ module.exports = {
 	entry: './src/index.tsx',
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'build'),
 		publicPath: '/',
 	},
 	module: {
@@ -77,7 +77,7 @@ module.exports = {
 		},
 		open: true,
 		static: {
-			directory: path.join(__dirname, 'dist'),
+			directory: path.join(__dirname, 'build'),
 		},
 	},
 };
