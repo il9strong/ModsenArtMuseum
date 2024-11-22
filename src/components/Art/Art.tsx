@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import ToFavoriteButton from '@/components/ToFavoriteButton/ToFavoriteButton';
 import { ArtDetails } from '@/types/type';
+import { artistRegex } from '@/constants/constants';
 
 function Art() {
 	const { id } = useParams();
@@ -47,8 +48,6 @@ function Art() {
 				setIsLoading(false);
 			});
 	}, [id]);
-
-	const artistRegex = /^([^(\n]+)[\s(]*(\w+).*?,/;
 
 	let artistCountry = 'Unknown country';
 
@@ -104,7 +103,7 @@ function Art() {
 											<span>Credit Line:</span> {artDetails.creditLine}
 										</p>
 										<p>
-											<span>Repository:</span> {artDetails.repository}
+											<span>Repository:</span> {artDetails.repository ? artDetails.repository : 'No repository'}
 										</p>
 										<p>{artDetails.isPublicDomain ? 'Public' : 'Private'}</p>
 									</div>

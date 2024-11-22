@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import bookmark from '@/assets/images/bookmark_saturated.svg';
 import './toFavoriteButton.scss';
 import { useLocation } from 'react-router-dom';
-import { ToFavoriteButtonProps } from '@/types/type';
+import { FavoriteItem, ToFavoriteButtonProps } from '@/types/type';
 
 function ToFavoriteButton({
 	artId,
@@ -19,8 +19,16 @@ function ToFavoriteButton({
 		setIsFavorite(favorites.some((item: { id: string }) => item.id === artId));
 	}, [artId]);
 
+	const getFavoritesFromStorage = () => {
+		return JSON.parse(sessionStorage.getItem('favorites') || '[]');
+	};
+
+	const saveFavoritesToStorage = (favorites: FavoriteItem[]) => {
+		sessionStorage.setItem('favorites', JSON.stringify(favorites));
+	};
+
 	const toggleFavorite = () => {
-		const favorites = JSON.parse(sessionStorage.getItem('favorites') || '[]');
+		const favorites = getFavoritesFromStorage();
 		let updatedFavorites;
 
 		if (isFavorite) {
@@ -38,7 +46,7 @@ function ToFavoriteButton({
 			updatedFavorites = [...favorites, newFavorite];
 		}
 
-		sessionStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+		saveFavoritesToStorage(updatedFavorites);
 		setIsFavorite(!isFavorite);
 	};
 
