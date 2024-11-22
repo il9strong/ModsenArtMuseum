@@ -205,7 +205,7 @@ function HomePage() {
 						)}
 					</form>
 
-					{!sortedResults.length && (
+					{sortedResults.length !== 0 && (
 						<div className="sortResults">
 							<select
 								value={sortOrder}

@@ -18,7 +18,7 @@ function Header() {
 
 	return (
 		<>
-			<div className="header">
+			<header className="header">
 				<div className="topBar">
 					<Link to="/">
 						<img src={logo} alt="Logo" className="logo" />
@@ -67,7 +67,7 @@ function Header() {
 						</>
 					)}
 				</div>
-			</div>
+			</header>
 		</>
 	);
 }

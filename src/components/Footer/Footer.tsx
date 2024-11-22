@@ -7,14 +7,14 @@ import './footer.scss';
 function Footer() {
 	return (
 		<>
-			<div className="footer">
+			<footer className="footer">
 				<div className="bottom-bar">
 					<Link to="/">
 						<img src={logo} alt="Logo" className="logo" />
 					</Link>
 					<img src={modsenLogo} alt="modsen logo" className="modsen-logo" />
 				</div>
-			</div>
+			</footer>
 		</>
 	);
 }
