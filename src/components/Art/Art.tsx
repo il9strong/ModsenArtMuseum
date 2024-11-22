@@ -103,7 +103,7 @@ function Art() {
 											<span>Credit Line:</span> {artDetails.creditLine}
 										</p>
 										<p>
-											<span>Repository:</span> {artDetails.repository}
+											<span>Repository:</span> {artDetails.repository ? artDetails.repository : 'No repository'}
 										</p>
 										<p>{artDetails.isPublicDomain ? 'Public' : 'Private'}</p>
 									</div>

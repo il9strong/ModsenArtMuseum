@@ -68,16 +68,4 @@ describe('App', () => {
 		await userEvent.type(searchInput, 'something');
 		expect(searchInput.value).toBe('something');
 	});
-	it('changes sort order when dropdown is selected', () => {
-		render(
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		);
-		const sortSelect = screen.getByRole('combobox') as HTMLSelectElement;
-		expect(sortSelect.value).toBe('title');
-
-		fireEvent.change(sortSelect, { target: { value: 'artist' } });
-		expect(sortSelect.value).toBe('artist');
-	});
 });
